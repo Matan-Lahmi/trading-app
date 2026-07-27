@@ -1,4 +1,3 @@
 image:
-  repository: matanlahmi/trading-app
-  tag: "latest"  repository: matanlahmi/tradingapp
-  tag: d169302f80b1b54bd8f5878dcdb44db237144460
+  repository: matanlahmi/tradingapp
+  tag: 2b1437b38561ed95e2640ff96d54dfced6f425a6
