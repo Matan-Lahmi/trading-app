@@ -1,0 +1,8 @@
+service:
+  port: 80
+
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: "latest"

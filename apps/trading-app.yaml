@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: trading-app
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: 2
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/argoproj/argocd-example-apps.git
+    targetRevision: HEAD
+    path: charts/trading-app
+    helm:
+      valueFile:
+        - values.yaml
+        - ../../values-overrides/trading-app/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: trading
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
