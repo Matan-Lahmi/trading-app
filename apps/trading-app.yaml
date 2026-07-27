@@ -12,7 +12,7 @@ spec:
     targetRevision: HEAD
     path: charts/trading-app
     helm:
-      valueFile:
+      valueFiles:
         - values.yaml
         - ../../values-overrides/trading-app/values.yaml
   destination:
